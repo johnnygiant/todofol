@@ -1,0 +1,44 @@
+URL:
+
+http://localhost:8000/graphql?query=query%20Users{users{email}}
+
+http://localhost:8000/graphql?query=mutation+users{updateUserName(id:%220%22,%20name:%22Cicci%22){id,name,email}}
+
+
+http://localhost:8000/graphql?query=query%20Users($id:String){%20users(id:$id){%20name%20}%20}&variables={%22id%22:%221%22}
+GraphiQL:
+
+query Users{
+  users(name:"Adam"){
+    email,id, name
+  }
+}
+----------------------
+query Users($id:String){
+  users(id:$id){
+    name
+  }
+}
+
+
+{ "id":"3" }
+-----------------------------
+mutation {
+  updateUserName(id:"0", name:"milosz"){
+    id,email,name
+  }
+}
+
+
+query Tasks {
+  tasks {
+    id
+    title
+    body
+    user {
+      name
+      id
+      email
+    }
+  }
+}
