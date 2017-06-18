@@ -50,12 +50,13 @@ class TaskType extends GraphQLType {
     //
     //   return $users->get();
     // }
-    // public function resolveTasksField($root, $args)
+
+    // public function resolveUsersField($root, $args)
     // {
     //     if (isset($args['id'])) {
-    //         return  $root->tasks->where('id', $args['id']);
+    //         return  $root->users->where('id', $args['id']);
     //     }
     //
-    //     return $root->tasks;
+    //     return $root->users;
     // }
 }
