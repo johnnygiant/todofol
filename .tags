@@ -1,0 +1,26 @@
+TasksQuery	/var/www/html/todofol/app/GraphQL/Query/TasksQuery.php	/^class TasksQuery extends Query {$/;"	class	line:12
+attributes	/var/www/html/todofol/app/GraphQL/Query/TasksQuery.php	/^    protected $attributes = [$/;"	variable	line:14
+type	/var/www/html/todofol/app/GraphQL/Query/TasksQuery.php	/^    public function type()$/;"	function	line:18
+args	/var/www/html/todofol/app/GraphQL/Query/TasksQuery.php	/^    public function args()$/;"	function	line:23
+resolve	/var/www/html/todofol/app/GraphQL/Query/TasksQuery.php	/^    public function resolve($root, $args, $context, ResolveInfo $info)$/;"	function	line:56
+fields	/var/www/html/todofol/app/GraphQL/Query/TasksQuery.php	/^         $fields = $info->getFieldSelection($depth = 3);$/;"	variable	line:58
+tasks	/var/www/html/todofol/app/GraphQL/Query/TasksQuery.php	/^         $tasks = Task::query();$/;"	variable	line:61
+VerifyJWTToken	/var/www/html/todofol/app/Http/Middleware/VerifyJWTToken.php	/^class VerifyJWTToken$/;"	class	line:11
+handle	/var/www/html/todofol/app/Http/Middleware/VerifyJWTToken.php	/^    public function handle($request, Closure $next)$/;"	function	line:20
+user	/var/www/html/todofol/app/Http/Middleware/VerifyJWTToken.php	/^            $user = JWTAuth::toUser($request->input('token'));$/;"	variable	line:23
+Kernel	/var/www/html/todofol/app/Http/Kernel.php	/^class Kernel extends HttpKernel$/;"	class	line:7
+middleware	/var/www/html/todofol/app/Http/Kernel.php	/^    protected $middleware = [$/;"	variable	line:16
+middlewareGroups	/var/www/html/todofol/app/Http/Kernel.php	/^    protected $middlewareGroups = [$/;"	variable	line:28
+routeMiddleware	/var/www/html/todofol/app/Http/Kernel.php	/^    protected $routeMiddleware = [$/;"	variable	line:52
+UserController	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^class UserController extends Controller$/;"	class	line:13
+user	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^    private $user;$/;"	variable	line:15
+__construct	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^    public function __construct(User $user){$/;"	function	line:16
+user	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^        $this->user = $user;$/;"	variable	line:17
+register	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^    public function register(Request $request){$/;"	function	line:20
+user	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^        $user = $this->user->create([$/;"	variable	line:21
+login	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^    public function login(Request $request){$/;"	function	line:29
+credentials	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^        $credentials = $request->only('email', 'password');$/;"	variable	line:30
+token	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^        $token = null;$/;"	variable	line:31
+getAuthUser	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^    public function getAuthUser(Request $request){$/;"	function	line:41
+user	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^        $user = JWTAuth::toUser($request->token);$/;"	variable	line:42
+getTasks	/var/www/html/todofol/app/Http/Controllers/UserController.php	/^    public function getTasks(Task $tasks){$/;"	function	line:47

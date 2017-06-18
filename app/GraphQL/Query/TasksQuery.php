@@ -58,7 +58,7 @@ class TasksQuery extends Query {
          $fields = $info->getFieldSelection($depth = 3);
          //dump($fields);
          //dd('dupa');
-         $tasks = Task::query();
+         $tasks = \App\Task::query();
 
          foreach ($fields as $field => $keys) {
              if($field === 'user') {
