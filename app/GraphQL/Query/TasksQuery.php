@@ -74,4 +74,13 @@ class TasksQuery extends Query {
         }
     }
 
+    // public function resolveUserField($root, $args) {
+    //   //dump('dupaaa');
+    //   if (isset($args['id'])) {
+    //       return  $root->tasks->where('user_id', $args['id']);
+    //   }
+    //
+    //   return $root->posts;
+    // }
+
 }

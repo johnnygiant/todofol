@@ -32,7 +32,7 @@ class TaskType extends GraphQLType {
             'user' => [
                 'args' => [
                   'id' => [
-                      'type'        => Type::string(),
+                      'type'        => Type::int(),
                       'description' => 'id of the user',
                   ],
                 ],
@@ -51,12 +51,11 @@ class TaskType extends GraphQLType {
     //   return $users->get();
     // }
 
-    // public function resolveUsersField($root, $args)
-    // {
-    //     if (isset($args['id'])) {
-    //         return  $root->users->where('id', $args['id']);
-    //     }
-    //
-    //     return $root->users;
-    // }
+    public function resolveUserField($root, $args)
+    {
+
+        if (isset($args['id'])) {
+            return  $root->user()->where('id', $args['id'])->first();
+        }
+    }
 }
